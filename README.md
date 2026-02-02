@@ -2,6 +2,8 @@
 
 A professional, production-ready React web application built with **TypeScript** and PatternFly components for Beyond78 Technologies. This application features a modern, responsive interface showcasing energy sector solutions with navigation across Home, About, Services, Projects, Contact, and Button components.
 
+[![Build Status](https://github.com/Sasidharan-tech/Beyond78_Intern_web/actions/workflows/build.yml/badge.svg)](https://github.com/Sasidharan-tech/Beyond78_Intern_web/actions/workflows/build.yml)
+
 ## 🚀 Features
 
 - **TypeScript**: Full type safety with TypeScript for better code quality and developer experience
