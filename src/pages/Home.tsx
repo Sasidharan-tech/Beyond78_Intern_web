@@ -1,149 +1,103 @@
-import { Grid, GridItem } from '@patternfly/react-core';
+import React from 'react';
+import ChartLineIcon from '@patternfly/react-icons/dist/esm/icons/chart-line-icon';
+import ChartBarIcon from '@patternfly/react-icons/dist/esm/icons/chart-bar-icon';
+import CubeIcon from '@patternfly/react-icons/dist/esm/icons/cube-icon';
+import BriefcaseIcon from '@patternfly/react-icons/dist/esm/icons/briefcase-icon';
 import '../styles/Pages.css';
 
 const Home: React.FC = () => {
   return (
-    <div className="home-page">
-      {/* Hero Section - Microsoft Style */}
-      <section className="microsoft-hero">
-        <div className="hero-container">
-          <div className="hero-visual">
-            <div className="hero-image-wrapper">
-              <div className="hero-badge">Beyond78</div>
-              <h2 className="hero-visual-title">Energy Solutions Platform</h2>
-            </div>
-          </div>
+    <>
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-heading">Empower Your Energy Operations</h1>
-            <p className="hero-description">
-              Introducing Beyond78 Technologies comprehensive platform with advanced 
-              trading solutions, real-time analytics, and seamless supply chain integration 
-              for energy sector leaders.
+            <h1 className="hero-title">Empower Your Energy Operations</h1>
+            <p className="hero-subtitle">
+              Advanced trading solutions, real-time analytics, and seamless supply chain integration 
+              for energy sector leaders. Transform your operations with Beyond78 Technologies.
             </p>
-            <div className="hero-actions">
-              <button className="btn-primary-large">Discover Our Platform</button>
-              <a href="#services" className="link-arrow">See all solutions</a>
+            <div className="hero-cta">
+              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+          <div className="hero-visual">
+            <div style={{ textAlign: 'center', color: 'white' }}>
+              <h2 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '16px' }}>Energy Solutions Platform</h2>
+              <p style={{ fontSize: '16px', opacity: 0.9 }}>Powering the future of energy trading</p>
             </div>
           </div>
         </div>
-        
-        {/* Carousel Controls */}
-        <div className="carousel-controls">
-          <button className="carousel-btn" aria-label="Pause">⏸</button>
-          <button className="carousel-btn active" aria-label="Slide 1">●</button>
-          <button className="carousel-btn" aria-label="Slide 2">○</button>
-          <button className="carousel-btn" aria-label="Slide 3">○</button>
+      </section>
+
+      {/* Features Section */}
+      <section className="section section-light">
+        <div className="section-header">
+          <h2 className="section-title">Comprehensive Energy Solutions</h2>
+          <p className="section-description">
+            End-to-end platform designed to optimize every aspect of your energy operations
+          </p>
+        </div>
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="feature-icon">
+              <ChartBarIcon style={{ fontSize: '32px' }} />
+            </div>
+            <h3 className="feature-title">Trading Platform</h3>
+            <p className="feature-description">
+              Real-time energy commodity trading with live market data and instant execution
+            </p>
+          </div>
+          
+          <div className="feature-card">
+            <div className="feature-icon">
+              <ChartLineIcon style={{ fontSize: '32px' }} />
+            </div>
+            <h3 className="feature-title">Analytics & Insights</h3>
+            <p className="feature-description">
+              Transform data into actionable insights with AI-powered predictive analytics
+            </p>
+          </div>
+          
+          <div className="feature-card">
+            <div className="feature-icon">
+              <CubeIcon style={{ fontSize: '32px' }} />
+            </div>
+            <h3 className="feature-title">Supply Chain</h3>
+            <p className="feature-description">
+              End-to-end visibility and control across your entire energy supply chain network
+            </p>
+          </div>
+          
+          <div className="feature-card">
+            <div className="feature-icon">
+              <BriefcaseIcon style={{ fontSize: '32px' }} />
+            </div>
+            <h3 className="feature-title">Expert Consulting</h3>
+            <p className="feature-description">
+              Strategic guidance from industry experts to optimize your operations
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Quick Links - Microsoft Style */}
-      <section className="quick-links-section">
-        <div className="quick-links-container">
-          <a href="#trading" className="quick-link-item">
-            <div className="quick-link-icon trading-icon">
-              <span className="icon-symbol">📊</span>
-            </div>
-            <span className="quick-link-text">Trading Platform</span>
-          </a>
-          
-          <a href="#analytics" className="quick-link-item">
-            <div className="quick-link-icon analytics-icon">
-              <span className="icon-symbol">📈</span>
-            </div>
-            <span className="quick-link-text">Analytics & Insights</span>
-          </a>
-          
-          <a href="#supply-chain" className="quick-link-item">
-            <div className="quick-link-icon supply-icon">
-              <span className="icon-symbol">🔗</span>
-            </div>
-            <span className="quick-link-text">Supply Chain</span>
-          </a>
-          
-          <a href="#consulting" className="quick-link-item">
-            <div className="quick-link-icon consulting-icon">
-              <span className="icon-symbol">💼</span>
-            </div>
-            <span className="quick-link-text">Expert Consulting</span>
-          </a>
-        </div>
-      </section>
-
-      {/* Featured Solutions */}
-      <section className="featured-section">
-        <div className="featured-container">
-          <Grid hasGutter>
-            <GridItem span={12} md={6} lg={3}>
-              <div className="featured-card">
-                <div className="featured-image trading-bg"></div>
-                <div className="featured-content">
-                  <h3 className="featured-title">Real-Time Trading Solutions</h3>
-                  <p className="featured-description">
-                    Advanced platforms for energy commodity trading with live market data and instant execution.
-                  </p>
-                  <a href="#" className="featured-link">Learn more</a>
-                </div>
-              </div>
-            </GridItem>
-            
-            <GridItem span={12} md={6} lg={3}>
-              <div className="featured-card">
-                <div className="featured-image supply-bg"></div>
-                <div className="featured-content">
-                  <h3 className="featured-title">Supply Chain Optimization</h3>
-                  <p className="featured-description">
-                    End-to-end visibility and control across your entire energy supply chain network.
-                  </p>
-                  <a href="#" className="featured-link">Learn more</a>
-                </div>
-              </div>
-            </GridItem>
-            
-            <GridItem span={12} md={6} lg={3}>
-              <div className="featured-card">
-                <div className="featured-image analytics-bg"></div>
-                <div className="featured-content">
-                  <h3 className="featured-title">Predictive Analytics</h3>
-                  <p className="featured-description">
-                    Transform data into actionable insights with AI-powered analytics and forecasting.
-                  </p>
-                  <a href="#" className="featured-link">Learn more</a>
-                </div>
-              </div>
-            </GridItem>
-            
-            <GridItem span={12} md={6} lg={3}>
-              <div className="featured-card">
-                <div className="featured-image cloud-bg"></div>
-                <div className="featured-content">
-                  <h3 className="featured-title">Cloud Infrastructure</h3>
-                  <p className="featured-description">
-                    Scalable, secure cloud solutions designed specifically for energy operations.
-                  </p>
-                  <a href="#" className="featured-link">Learn more</a>
-                </div>
-              </div>
-            </GridItem>
-          </Grid>
-        </div>
-      </section>
-
-      {/* Stats Section - Microsoft Style */}
-      <section className="stats-section">
-        <div className="stats-container">
-          <div className="stat-item-large">
+      {/* Stats Section */}
+      <section className="section section-white">
+        <div className="stats-grid">
+          <div className="stat-item">
             <h2 className="stat-number">15+</h2>
             <p className="stat-label">Years of Excellence</p>
           </div>
-          <div className="stat-item-large">
+          <div className="stat-item">
             <h2 className="stat-number">500+</h2>
             <p className="stat-label">Successful Projects</p>
           </div>
-          <div className="stat-item-large">
+          <div className="stat-item">
             <h2 className="stat-number">98%</h2>
             <p className="stat-label">Client Satisfaction</p>
           </div>
-          <div className="stat-item-large">
+          <div className="stat-item">
             <h2 className="stat-number">24/7</h2>
             <p className="stat-label">Support Available</p>
           </div>
@@ -151,14 +105,16 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-banner">
-        <div className="cta-banner-content">
-          <h2 className="cta-banner-title">Ready to transform your energy operations?</h2>
-          <p className="cta-banner-text">Connect with our experts to discuss your specific needs.</p>
-          <button className="btn-primary-large">Schedule a Consultation</button>
+      <section className="cta-section">
+        <div className="cta-content">
+          <h2 className="cta-title">Ready to transform your energy operations?</h2>
+          <p className="cta-description">
+            Connect with our experts to discuss your specific needs and discover how we can help.
+          </p>
+          <button className="btn btn-primary">Schedule a Consultation</button>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
