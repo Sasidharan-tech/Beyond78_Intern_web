@@ -20,7 +20,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|ttf|eot)$/,
@@ -41,7 +45,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'public')
     },
-    port: 3001,
+    port: 3002,
     hot: true,
     historyApiFallback: true,
     open: true
